@@ -26,12 +26,15 @@ public class Persona {
 		this.nombre = nombre;
 	}
 	public int getEdad() {
+		System.out.println("Ha entrado en getEdad en Persona");
 		return edad;
 	}
 	public void setEdad(int edad) {
 		this.edad = edad;
 	}
 	public int getSalario() {
+		System.out.println("Ha entrado en getSalario en Persona");
+
 		return salario;
 	}
 	public void setSalario(int salario) {

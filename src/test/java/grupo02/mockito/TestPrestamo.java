@@ -22,12 +22,12 @@ public class TestPrestamo {
 		 * **/
 		Persona cliente2 = mock(Persona.class);
 		when(cliente2.getEdad()).thenReturn(17); 
-		//when(cliente2.getSalario()).thenReturn(50000);
+		when(cliente2.getSalario()).thenReturn(5000);
 		Prestamo p = new Prestamo(cliente2, 2, 10000);
 		
-		 Assert.assertFalse(p.mayoredad());
+		// Assert.assertFalse(p.mayoredad());
 		 
-		// Assert.assertEquals(p.tieneingresos(), 25000);
+		Assert.assertEquals(p.tieneingresos(), 5000);
 
 		 
 	}
