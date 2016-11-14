@@ -11,6 +11,12 @@ public class Sumar{
 		
 		logger.debug("Ha entrado en sumar() de la clase SUMAR");
 		return a+b;
+		
+		
+		
+		
+		
+		
 		//return a+b+1;
 		/**
 		 * return a+b; funciona correctamente

@@ -23,22 +23,22 @@ public class TestMultiplicar {
 		/**
 		 * OPCIÓN SIN MOCKITO -- CASCA
 		 * */
-	 Sumar s=new Sumar();	  
-	 Multiplicar m= new Multiplicar();
-	  
-	  
-	 m.sets(s);
-	 Assert.assertEquals(m.multiplicarSumar(2, 3, 2),10);
-		
+//	 Sumar s=new Sumar();	  
+//	 Multiplicar m= new Multiplicar();
+//	  
+//	  
+//	 m.sets(s);
+//	 Assert.assertEquals(m.multiplicarSumar(2, 3, 2),10);
+//		
 		/**
 		 * OPCIÓN CON MOCKITO -- BIEN!
 		 * */
-//	 ServicioA servicioA = mock(ServicioA.class);
-//	 when(servicioA.sumar(2,3)).thenReturn(5);
-//	  
-//	 ServicioB servicioB= new ServicioB();
-//	 servicioB.setServicioA(servicioA);
-//	 Assert.assertEquals(servicioB.multiplicarSumar(2, 3, 2),10);
+	 Sumar servicioA = mock(Sumar.class);
+	 when(servicioA.sumar(2,3)).thenReturn(5);
+	  
+	 Multiplicar servicioB= new Multiplicar();
+	 servicioB.sets(servicioA);
+	 Assert.assertEquals(servicioB.multiplicarSumar(2, 3, 2),10);
 	 
 	 /**
 	  * Ahora ya no llama al metodo que hemos forzado que este mal
