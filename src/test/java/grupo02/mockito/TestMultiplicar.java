@@ -29,7 +29,7 @@ public class TestMultiplicar {
 //	  
 //	 m.sets(s);
 //	 Assert.assertEquals(m.multiplicarSumar(2, 3, 2),10);
-//		
+		
 		/**
 		 * OPCIÓN CON MOCKITO -- BIEN!
 		 * */
