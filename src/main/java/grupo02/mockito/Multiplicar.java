@@ -2,20 +2,11 @@ package grupo02.mockito;
 
 public class Multiplicar{
 	 
-	
-
-	private Sumar s;
+	 private Sumar s;
 	
 	 /**
 	  * Operaciones matemáticas
 	  */
-	 public Multiplicar(Sumar s) {
-			super();
-			this.s = s;
-		}
-	 public Multiplicar() {
-			super();
-		}
 	 public int multiplicar(int a ,int b) {
 		  
 		 return a*b;
@@ -24,8 +15,7 @@ public class Multiplicar{
 		/**
 		 * Metodo que llama al la clase ServicioA
 		 * */  
-		System.out.println("Ha entrado a clase multiplicarSumar");
-
+		 
 		 return s.sumar(a, b)*multiplicador;
 	  
 	 }

@@ -1,5 +1,6 @@
 package grupo02.mockito;
 
+
 public class Prestamo {
 	
 	
@@ -7,6 +8,7 @@ public class Prestamo {
 	private Persona cliente;
 	private int interes;
 	private int importe;
+	
 	
 	public Prestamo(Persona cliente, int interes, int importe) {
 		super();
@@ -27,6 +29,7 @@ public class Prestamo {
 		}
 	}
 	public int tieneingresos(){
+			
 		if(cliente.getSalario() > 25000){
 			return 25000;
 		}else{

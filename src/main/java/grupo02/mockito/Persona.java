@@ -1,5 +1,9 @@
 package grupo02.mockito;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+
 public class Persona {
 
 	
@@ -7,6 +11,8 @@ public class Persona {
 	private String nombre;
 	private int edad;
 	private int salario;
+	
+	final Logger logger = LogManager.getLogger(Persona.class);
 	
 	public Persona(String nombre, int edad, int salario) {
 		super();
@@ -20,21 +26,27 @@ public class Persona {
 	}
 	
 	public String getNombre() {
+		
+		
+		
 		return nombre;
+		
 	}
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 	public int getEdad() {
-		System.out.println("Ha entrado en getEdad en Persona");
+				
+		logger.debug("Ha entrado en getEdad() de la clase PERSONA");
+		
 		return edad;
 	}
 	public void setEdad(int edad) {
 		this.edad = edad;
 	}
 	public int getSalario() {
-		System.out.println("Ha entrado en getSalario en Persona");
-
+		
+		logger.debug("Ha entrado en getSalario() de la clase PERSONA");
 		return salario;
 	}
 	public void setSalario(int salario) {

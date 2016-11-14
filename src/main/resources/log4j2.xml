@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration >
+  <Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </Console>    
+    <File name="File" fileName="Loggers\log4j2Prueba.log"> <!--Crea una nueva carpeta y mete ahi el fichero  -->
+      <PatternLayout>
+        <Pattern>"%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"</Pattern>
+      </PatternLayout>
+    </File>
+  </Appenders>
+  <Loggers>
+    <Logger name="grupo02.mockito.Sumar" level="debug" additivity="false">
+      <AppenderRef ref="Console"/><AppenderRef ref="File"/>
+    </Logger>
+    
+    <Logger name="grupo02.mockito.Persona" level="debug" additivity="false">
+      <AppenderRef ref="Console"/>
+    </Logger>
+    
+    
+    <Root level="error">
+      <AppenderRef ref="Console"/>
+    </Root>
+  </Loggers>
+</Configuration>

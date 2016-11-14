@@ -1,10 +1,15 @@
 package grupo02.mockito;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class Sumar{
 	 
 	public int sumar(int a ,int b) {
 	  
-		System.out.println("Ha entrado a clase suma");
+		final Logger logger = LogManager.getLogger(Sumar.class);
+		
+		logger.debug("Ha entrado en sumar() de la clase SUMAR");
 		return a+b;
 		//return a+b+1;
 		/**
